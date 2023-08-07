@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { IResponse } from '../../../abstractions/interfaces';
+import { IResponse } from '../../../shared/abstractions/interfaces';
 import SuperLogService from '../../../lib/superlog';
 import { SalesReportService } from '../services/sales.service';
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import LogShipperService from '../shared/services/logshipper.service';
-import { TransporterType } from '../abstractions/enums';
+import { TransporterType } from '../shared/abstractions/enums';
 
 @Injectable() // This decorator is required for DI of NestJS
 export default class SuperLogService {

@@ -1,6 +1,6 @@
 import { IHeaders, KafkaService, SubscribeTo } from '@rob3000/nestjs-kafka';
 import { Controller, Inject } from '@nestjs/common';
-import { KafkaTopics } from '../../../../abstractions/enums';
+import { KafkaTopics } from '../../../../shared/abstractions/enums';
 import { SalesReportService } from '../../services/sales.service';
 
 @Controller()

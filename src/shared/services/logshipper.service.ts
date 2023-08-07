@@ -1,4 +1,4 @@
-import { TransporterType } from '../../abstractions/enums';
+import { TransporterType } from '../abstractions/enums';
 
 export default class LogShipperService {
   private transports: string[] = [];
