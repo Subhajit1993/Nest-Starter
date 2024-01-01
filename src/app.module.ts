@@ -25,10 +25,10 @@ import { KafkaModule } from '@rob3000/nestjs-kafka';
     // Load Environment Variables
     initEnvironment(),
     //Load Postgres Module
-    initPostgres(),
+    // initPostgres(),
     // Load Kafka Module
-    initKafka(),
-    ReportsModule,
+    // initKafka(),
+    // ReportsModule,
     BaseModule,
   ],
 })
