@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import SuperLogService from '../../../lib/superlog';
 import axios from '../../../config/axios';
-import mock_data from '../../../../test/order_resp';
 
 @Injectable()
 export class SalesReportService {
@@ -12,6 +11,17 @@ export class SalesReportService {
   }
 
   async fetchOrderDetails(): Promise<any> {
-    return mock_data;
+    return {
+      data: [
+        {
+          id: 1,
+          name: 'Order 1',
+        },
+        {
+          id: 2,
+          name: 'Order 2',
+        },
+      ],
+    };
   }
 }
