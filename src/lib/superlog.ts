@@ -9,7 +9,7 @@ export default class SuperLogService {
 
   constructor() {
     this.logShipperService = new LogShipperService('report-service');
-    this.logShipperService.addTransport(TransporterType.CONSOLE);
+    // this.logShipperService.addTransport(TransporterType.CONSOLE);
     // this.logShipperService.addTransport(TransporterType.LOGSTASH);
   }
 
