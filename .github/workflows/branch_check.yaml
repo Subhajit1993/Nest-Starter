@@ -20,7 +20,7 @@ jobs:
           if [[ ! $branch_name =~ ^(feature|hotfix)\/[a-zA-Z0-9_-]+-[0-9]+$ ]]; then
             echo "Branch name $GITHUB_HEAD_REF does not match the required format. Please use feature/<feature_name>-<ticket_id> or hotfix/<hotfix_name>-<ticket_id>."
             echo "Closing the pull request..."
-            gh pr close $GITHUB_HEAD_REF -c "Branch name does not match the required format. Please use feature/<feature_name>-<ticket_id> or hotfix/<hotfix_name>-<ticket_id>."
+            gh pr close $GITHUB_HEAD_REF -c "Branch name $GITHUB_HEAD_REF does not match the required format. Please use feature/<feature_name>-<ticket_id> or hotfix/<hotfix_name>-<ticket_id>."
             exit 1
           fi
           
