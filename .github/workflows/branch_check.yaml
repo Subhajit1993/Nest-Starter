@@ -1,0 +1,34 @@
+name: Branch Check
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+    branches:
+      - master
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to repo
+        uses: actions/checkout@v2
+
+      - name: Check branch name
+        run: |
+          branch_name=$(echo $GITHUB_HEAD_REF | cut -d '/' -f 2)
+          
+          if [[ ! $branch_name =~ ^(feature|hotfix)\/[a-zA-Z0-9_-]+-[0-9]+$ ]]; then
+            echo "Branch name does not match the required format. Please use feature/<feature_name>-<ticket_id> or hotfix/<hotfix_name>-<ticket_id>."
+            echo "Closing the pull request..."
+            gh pr close $GITHUB_PR_NUMBER --delete-branch
+            exit 1
+          fi
+          
+
+
+
+
+
+
+
+
+
+
