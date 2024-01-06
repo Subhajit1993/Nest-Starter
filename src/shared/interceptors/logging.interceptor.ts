@@ -8,7 +8,6 @@ import {
   Injectable,
 } from '@nestjs/common';
 import { map, Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 import SuperLog from '../../lib/superlog';
 
 // TODO: Add the Logstash transport here
